@@ -3,6 +3,7 @@
     <head>
         <title>Klotski Game</title>
         <link rel="stylesheet" href="style/klotski.css">
+        <script src="js/klotski.js" defer></script>
     </head>
     <body>
         <div class="game">
@@ -12,14 +13,22 @@
                 <div class="bloco casa">2</div>
                 <div class="bloco casa">3</div>
                 <div class="bloco casa">4</div>
-                <div class="bloco-vazio casa"></div>
+                <div class="bloco casa">5</div>
                 <div class="bloco casa">6</div>
                 <div class="bloco casa">7</div>
-                <div class="bloco casa">5</div>
+                <div class="bloco-vazio casa"></div>
                 <div class="bloco casa">8</div>
             </div>
         </div>
-        
-        <script src="js/klotski.js"></script>
+        <div class="container-cronometro">
+            <div class="cronometro">
+                <div class="tela">00:00</div>
+            </div>
+        </div>
+        <div class="end-game">
+            <h1 class="mensagem">Você Venceu!</h1>
+            <p class="mensagem-tempo">seu tempo foi 00:00!</p>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
     </body>
 </html>

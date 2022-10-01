@@ -9,7 +9,7 @@
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom, #2d6e9c, #3581B8);
@@ -72,4 +72,82 @@ body {
     width: 170px;
     box-shadow: rgb(0 0 0 / 22%) 5px 5px 10px 0px;
     border-radius: 3px;
+}
+
+.container-cronometro {
+    display: flex;
+    height: 750px;
+    width: 26vw;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.cronometro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCB07E;
+    height: 100px;
+    width: 250px;   
+    border-radius: 8px;
+    box-shadow: 0px 0px 13px #201f4c70;
+}
+
+.tela {
+    display: flex;
+    background-color: #eea676;
+    height: 70px;
+    width: 210px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -2px -2px 20px 4px #00000047;
+    color: #a57454;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #a07050cb;
+}
+
+.end-game {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.432);
+}
+
+.mensagem {
+    color: #e6e7e2;
+    text-shadow: 1px 1px 2.5px #00000047;
+    font-size: 6rem;
+}
+
+.mensagem-tempo {
+    color: #e6e7e2;
+    text-shadow: 1px 1px 2.5px #00000047;
+    font-size: 3rem;
+}
+
+#reiniciar {
+    margin-top: 100px;
+    background-color: #b1764f;
+    border: none;
+    height: 60px;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 13px #201f4c70;
+    font-size: 2.5rem;
+    color: #e6e7e2;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#reiniciar:hover {
+    color: rgb(63, 63, 63);
+    background-color: #DEE2D6;
+    box-shadow: inset -2px -2px 20px 4px #0000005e;
 }
