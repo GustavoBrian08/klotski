@@ -13,6 +13,8 @@ let pecas = [
 
 let indice_zero = pecas.indexOf(0);
 
+embaralharPecas();
+
 document.addEventListener('keydown', (event) => {
     let tecla = event.key;
     let casa = casas[indice_zero];
@@ -52,19 +54,43 @@ const verificar = () => {
 }
 
 // Cronometro??
-// Embaralhar as peças!
 
 const reiniciar = () => {
-    document.querySelector("#reiniciar").onclick = () => end_game.style.display = 'none';
+    document.querySelector("#reiniciar").onclick = () => {
+        end_game.style.display = 'none'
+        embaralharPecas();
+    };
+}
+
+function embaralharPecas(){
+    for (let i = 0; i < casas.length; i++){
+        const x = Math.floor(Math.random() * (i + 1));
+        [pecas[i], pecas[x]] = [pecas[x], pecas[i]];
+        [casas[i].innerText, casas[x].innerText] = [pecas[i], pecas[x]];
+        indice_zero = pecas.indexOf(0);
+        
+        if (casas[i].classList.contains("bloco-vazio")){
+            casas[i].classList.replace("bloco-vazio", "bloco");
+        }
+        
+        if (casas[indice_zero].innerText == 0){
+            casas[indice_zero].classList.replace("bloco", "bloco-vazio");
+            casas[indice_zero].innerText = '';
+
+            // TRATANDO UM BUG QUE NÃO ENTENDO PORQUE ACONTECE T-T
+            let indice_8 = pecas.indexOf(8);
+            if (casas[indice_8].innerText == 8){
+                casas[indice_8].classList.replace("bloco-vazio", "bloco");
+            }
+        }
+    }
+    return casas, pecas, indice_zero;
 }
 
 const trocarCasas = (idx, a, b, c) => {
     if (indice_zero != a && indice_zero != b && indice_zero != c){
-        casas[idx].classList.add("bloco-vazio");
-        casas[indice_zero].classList.add("bloco");
-        
-        casas[idx].classList.remove("bloco");
-        casas[indice_zero].classList.remove("bloco-vazio");
+        casas[idx].classList.replace("bloco", "bloco-vazio");
+        casas[indice_zero].classList.replace("bloco-vazio", "bloco");
 
         casas[indice_zero].innerText = casas[idx].innerText;
         casas[idx].innerText = '';
