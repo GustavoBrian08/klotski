@@ -53,6 +53,7 @@ body {
     background-color: #DEE2D6;
     box-shadow: rgb(0 0 0 / 22%) 5px 5px 10px 0px;
     font-size: 8rem;
+    user-select: none;
     text-align: center;
     color: #a0a399;
     text-shadow: 1px 1px 2.5px #00000047;
@@ -104,6 +105,7 @@ body {
     color: #a57454;
     font-size: 3rem;
     text-shadow: 2px 2px 5px #a07050cb;
+    user-select: none;
 }
 
 .end-game {

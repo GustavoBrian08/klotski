@@ -52,6 +52,27 @@ document.addEventListener('keydown', (event) => {
     verificarFim();
 });
 
+// ESCUTADOR PARA MOVIMENTAR POR CLIQUES DO MOUSE
+document.addEventListener('click', (event) => {
+    let pecaClicada = event.target.innerHTML;
+    let casaAcima = casas[indice_zero - 3]; // pegando as casas baseadas na posição da peça zero
+    let casaAbaixo = casas[indice_zero + 3];
+    let casaEsquerda = casas[indice_zero - 1];
+    let casaDireita = casas[indice_zero + 1];
+
+    // SEMPRE NECESSÁRIO VERIFICAR SE A PEÇA É UNDEFINED
+    if(casaAcima != undefined && pecaClicada == casaAcima.innerHTML){
+        moverBaixo();
+    } else if(casaAbaixo != undefined && pecaClicada == casaAbaixo.innerHTML){
+        moverCima();
+    } else if(casaEsquerda != undefined && pecaClicada == casaEsquerda.innerHTML){
+        moverDireita();
+    } else if(casaDireita != undefined && pecaClicada == casaDireita.innerHTML){
+        moverEsquerda();
+    }
+    verificarFim();
+});
+
 function embaralharPecas(){
     for (let i = 0; i < casas.length; i++){
         const x = Math.floor(Math.random() * (i + 1)); // Pegando um número aleatório
