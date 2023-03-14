@@ -27,8 +27,10 @@ A jogabilidade é simples, além de ser um game conhecido. O objetivo é ordenar
 deixando o espaço vazio no canto inferior-direito.
 
 Pode ser jogado usando:
- - ArrowUp/ArrowDown/Arrow/left/ArrowRight
+ - ArrowUp/ArrowDown/Arrowleft/ArrowRight
  - Toque/Click
+
+Clique [Aqui](https://gustavobrian08.github.io/klotski) para jogar!
  
 ## Observação
 
