@@ -23,7 +23,7 @@ Visite meu [Portfólio](https://gustavobrian08.github.io).
 
 ## O Jogo
 
-A jogabilidade é simples, além de ser um game conhecido. O objetivo é ordenar os os números de forma crescente no menor tempo possível, 
+A jogabilidade é simples, além de ser um game conhecido. O objetivo é ordenar os números de forma crescente no menor tempo possível, 
 deixando o espaço vazio no canto inferior-direito.
 
 Pode ser jogado usando:
@@ -34,7 +34,7 @@ Clique [Aqui](https://gustavobrian08.github.io/klotski) para jogar!
  
 ## Observação
 
-Apesar de jogável no celular, não fiz (talvez farei) a parte da responsividade para outras resoluções, então em alguns dispositivos pode não 
+Apesar de jogável no celular, não fiz (talvez eu faça) a parte da responsividade para outras resoluções, então em alguns dispositivos pode não 
 responder muito bem. Não tenho certeza quanto ao nome do game, mas foi o que encontrei através da pesquisa, então deixei assim mesmo.
 
 ## Feito Com:
@@ -52,4 +52,4 @@ Para mais informações sobre este ou outros projetos, entre em contato comigo, 
  - [Portfolio](https://gustavobrian08.github.io)
  
  
-# Obrigado!
+### Obrigado!
